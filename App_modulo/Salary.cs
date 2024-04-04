@@ -75,12 +75,20 @@ namespace App_modulo
                 vSalario.VALORDIA = txtSalario.Text;
                 vSalario.ID = SalarioActual.ID;
             };
+            // Comprueba si los valores han cambiado
+            if (vSalario.OCUPACION == SalarioActual.OCUPACION &&
+                vSalario.VALORDIA == SalarioActual.VALORDIA)
+            {
+                MessageBox.Show("Debes realizar cambios antes de poder modificar.", "Sin cambios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             int resultado = SalarioDAL.Modificar(vSalario);
 
             if (resultado > 0)
             {
-                MessageBox.Show("Suministro Editado Correctamente!",
-                 "Suministro Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Salario Editado Correctamente!",
+                 "Salario Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 limpiar();
                 btnEliminar.Enabled = false;
@@ -89,7 +97,7 @@ namespace App_modulo
             }
             else
             {
-                MessageBox.Show("No Se Pudo Editar El Suministro", "Ocurrio un Error");
+                MessageBox.Show("No Se Pudo Editar El Salario", "Ocurrio un Error");
             }
 
         }
@@ -108,7 +116,7 @@ namespace App_modulo
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Estas Seguro Que Quieres Eliminar Este Producto??", "Estas Seguro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Estas Seguro Que Quieres Eliminar Este Salario??", "Estas Seguro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
 
@@ -116,7 +124,7 @@ namespace App_modulo
 
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Eliminado Correctamente", "Producto Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Eliminado Correctamente", "Salario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiar();
 
                     btnEliminar.Enabled = false;

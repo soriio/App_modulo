@@ -28,6 +28,17 @@ namespace App_modulo.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-QN9VI84;Initial Catalog=ClientsDB;Integrated Security=True;En" +
             "crypt=False")]
+        public string ClientsDBConnectionString {
+            get {
+                return ((string)(this["ClientsDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-QN9VI84;Initial Catalog=ModuloDB;Integrated Security=True;Enc" +
+            "rypt=False")]
         public string ModuloDBConnectionString {
             get {
                 return ((string)(this["ModuloDBConnectionString"]));

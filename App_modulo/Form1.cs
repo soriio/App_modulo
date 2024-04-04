@@ -117,6 +117,21 @@ namespace App_modulo
                 ID = ClienteActual.ID,
 
             };
+            if (pCliente.CONTACTO == ClienteActual.CONTACTO &&
+                pCliente.CLIENTE == ClienteActual.CLIENTE &&
+                pCliente.TELEFONO == ClienteActual.TELEFONO &&
+                pCliente.CELULAR == ClienteActual.CELULAR &&
+                pCliente.CORREO == ClienteActual.CORREO &&
+                pCliente.CARGO == ClienteActual.CARGO &&
+                pCliente.DIRECCION == ClienteActual.DIRECCION &&
+                pCliente.NIT == ClienteActual.NIT &&
+                pCliente.CUIDAD == ClienteActual.CUIDAD &&
+                pCliente.VENDEDOR == ClienteActual.VENDEDOR)
+            {
+                MessageBox.Show("Debes realizar cambios antes de poder modificar.", "Sin cambios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             int resultado = ClienteDAL.Modificar(pCliente);
 
                 

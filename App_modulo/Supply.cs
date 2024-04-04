@@ -86,6 +86,18 @@ namespace App_modulo
                 sSuministro.CONFIGURACION = txtConfigura.Text;
                 sSuministro.ID = SuministroActual.ID;
             };
+
+            // Comprueba si los valores han cambiado
+            if (sSuministro.EQUIPO == SuministroActual.EQUIPO &&
+                sSuministro.TRANSPORTE == SuministroActual.TRANSPORTE &&
+                sSuministro.INSTALACION == SuministroActual.INSTALACION &&
+                sSuministro.CONFIGURACION == SuministroActual.CONFIGURACION)
+            {
+                MessageBox.Show("Debes realizar cambios antes de poder modificar.", "Sin cambios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+
             int resultado = SuministroDAL.Modicar(sSuministro);
 
             if (resultado > 0) 
