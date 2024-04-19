@@ -14,7 +14,7 @@ namespace App_modulo
             int retorno = 0;
             using (SqlConnection conn = BDComun.ObtenerConexion())
             {
-                SqlCommand Comando=new SqlCommand(string.Format("Insert Into supply ( EQUIPO, TRANSPORTE, INSTALACION, CONFIGURACIÓN) values ('{0}', '{1}', '{2}', '{3}')",
+                SqlCommand Comando=new SqlCommand(string.Format("Insert Into TIPO ( EQUIPO, TRANSPORTE, INSTALACION, CONFIGURACIÓN) values ('{0}', '{1}', '{2}', '{3}')",
                     sSuministro.EQUIPO, sSuministro.TRANSPORTE, sSuministro.INSTALACION, sSuministro.CONFIGURACION), conn);
 
                 retorno = Comando.ExecuteNonQuery();
@@ -28,7 +28,7 @@ namespace App_modulo
             List<Suministro> Lista = new List<Suministro>();
             using (SqlConnection conexion = BDComun.ObtenerConexion())
             {
-                SqlCommand comando = new SqlCommand(String.Format("Select ID, EQUIPO, TRANSPORTE, INSTALACION, CONFIGURACION from supply where EQUIPO like '%{0}%'", sEQUIPO), conexion);
+                SqlCommand comando = new SqlCommand(String.Format("Select ID, EQUIPO, TRANSPORTE, INSTALACION, CONFIGURACION from TIPO where EQUIPO like '%{0}%'", sEQUIPO), conexion);
 
                 SqlDataReader reader = comando.ExecuteReader();
                 
@@ -57,7 +57,7 @@ namespace App_modulo
             {
                 Suministro sSuministro = new Suministro();
                 SqlCommand comando = new SqlCommand(string.Format(
-                    "Select ID, EQUIPO, TRANSPORTE, INSTALACION, CONFIGURACION from supply where ID={0}", sID), conexion);
+                    "Select ID, EQUIPO, TRANSPORTE, INSTALACION, CONFIGURACION from TIPO where ID={0}", sID), conexion);
 
                 SqlDataReader reader = comando.ExecuteReader();
 
@@ -83,7 +83,7 @@ namespace App_modulo
             int retorno = 0;
             using (SqlConnection conexion = BDComun.ObtenerConexion())
             {
-                SqlCommand comando = new SqlCommand(string.Format("UPDATE supply SET EQUIPO = '{0}', TRANSPORTE = '{1}', INSTALACION = '{2}', CONFIGURACION = '{3}' WHERE ID = '{4}'",
+                SqlCommand comando = new SqlCommand(string.Format("UPDATE TIPO SET EQUIPO = '{0}', TRANSPORTE = '{1}', INSTALACION = '{2}', CONFIGURACION = '{3}' WHERE ID = '{4}'",
                     sSuministro.EQUIPO, sSuministro.TRANSPORTE, sSuministro.INSTALACION, sSuministro.CONFIGURACION, sSuministro.ID), conexion);
 
                 comando.Parameters.AddWithValue("@EQUIPO", sSuministro.EQUIPO);
@@ -104,7 +104,7 @@ namespace App_modulo
             int retorno = 0;
             using (SqlConnection conexion = BDComun.ObtenerConexion())
             {
-                SqlCommand comando = new SqlCommand(string.Format("Delete from supply where ID={0}", sID), conexion);
+                SqlCommand comando = new SqlCommand(string.Format("Delete from TIPO where ID={0}", sID), conexion);
                 retorno =comando.ExecuteNonQuery();
                 conexion.Close();
             }

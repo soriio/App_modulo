@@ -35,8 +35,8 @@ namespace App_modulo
 
         private void btnAdminSuminis_Click(object sender, EventArgs e)
         {
-            Supply supply = new Supply();
-            supply.ShowDialog();
+                Supply supply = new Supply();
+                supply.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)

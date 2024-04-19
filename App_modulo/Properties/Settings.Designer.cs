@@ -26,22 +26,22 @@ namespace App_modulo.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-QN9VI84;Initial Catalog=ClientsDB;Integrated Security=True;En" +
-            "crypt=False")]
-        public string ClientsDBConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-QN9VI84;Initial Catalog=ModuloDB;Integrated Security=True;Enc" +
+            "rypt=False")]
+        public string ModuloDBConnectionString {
             get {
-                return ((string)(this["ClientsDBConnectionString"]));
+                return ((string)(this["ModuloDBConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-QN9VI84;Initial Catalog=ModuloDB;Integrated Security=True;Enc" +
-            "rypt=False")]
-        public string ModuloDBConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-QN9VI84\\SQLSERVER;Initial Catalog=ModuloDB;User=sa;Password=c" +
+            "aos10")]
+        public string ClientsDBConnectionString {
             get {
-                return ((string)(this["ModuloDBConnectionString"]));
+                return ((string)(this["ClientsDBConnectionString"]));
             }
         }
     }

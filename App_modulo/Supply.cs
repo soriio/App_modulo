@@ -135,7 +135,6 @@ namespace App_modulo
             if (MessageBox.Show("Estas Seguro Que Quieres Eliminar Este Producto??", "Estas Seguro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
-
                 int resultado = SuministroDAL.Eliminar((int)SuministroActual.ID);
 
                 if (resultado > 0)

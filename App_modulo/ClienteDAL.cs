@@ -14,7 +14,7 @@ namespace App_modulo
             int retorno = 0;
             using (SqlConnection conn = BDComun.ObtenerConexion())
             {
-                SqlCommand Comando=new SqlCommand(string.Format("Insert Into Clients ( CONTACTO, CLIENTE, TELEFONO, CELULAR, CORREO, CARGO, DIRECCION, NIT, CUIDAD, VENDEDOR) values ('{0}', '{1}', '{2}', '{3}', '{4}','{5}', '{6}', '{7}', '{8}', '{9}')",
+                SqlCommand Comando=new SqlCommand(string.Format("Insert Into CLIENTES_CONSOLIDADOS ( CONTACTO, CLIENTE, TELEFONO, CELULAR, CORREO, CARGO, DIRECCION, NIT, CUIDAD, VENDEDOR) values ('{0}', '{1}', '{2}', '{3}', '{4}','{5}', '{6}', '{7}', '{8}', '{9}')",
                     pCliente.CONTACTO, pCliente.CLIENTE, pCliente.TELEFONO, pCliente.CELULAR, pCliente.CORREO, pCliente.CARGO, pCliente.DIRECCION, pCliente.NIT, pCliente.CUIDAD, pCliente.VENDEDOR),conn);
 
                 retorno = Comando.ExecuteNonQuery();
@@ -29,7 +29,7 @@ namespace App_modulo
             using (SqlConnection conexion = BDComun.ObtenerConexion())
             {
                 SqlCommand comando = new SqlCommand(string.Format(
-                    "Select ID, CONTACTO, CLIENTE, TELEFONO, CELULAR, CORREO, CARGO, DIRECCION, NIT, CUIDAD, VENDEDOR from Clients where CONTACTO like '%{0}%'", pCONTACTO), conexion);
+                    "Select ID, CONTACTO, CLIENTE, TELEFONO, CELULAR, CORREO, CARGO, DIRECCION, NIT, CUIDAD, VENDEDOR from CLIENTES_CONSOLIDADOS where CONTACTO like '%{0}%'", pCONTACTO), conexion);
 
                 SqlDataReader reader = comando.ExecuteReader();
                 
@@ -65,7 +65,7 @@ namespace App_modulo
             {
                 Cliente pClients = new Cliente();
                 SqlCommand comando = new SqlCommand(string.Format(
-                    "Select ID, CONTACTO, CLIENTE, TELEFONO, CELULAR, CORREO, CARGO, DIRECCION, NIT, CUIDAD, VENDEDOR from Clients where  ID={0}", pID), conexion);
+                    "Select ID, CONTACTO, CLIENTE, TELEFONO, CELULAR, CORREO, CARGO, DIRECCION, NIT, CUIDAD, VENDEDOR from CLIENTES_CONSOLIDADOS where  ID={0}", pID), conexion);
 
                 SqlDataReader reader = comando.ExecuteReader();
 
@@ -98,7 +98,7 @@ namespace App_modulo
             int retorno = 0;
             using(SqlConnection  conexion = BDComun.ObtenerConexion())
             {
-                SqlCommand comando = new SqlCommand(string.Format("Update Clients set CONTACTO='{0}', CLIENTE='{1}', TELEFONO='{2}', CELULAR='{3}', CORREO='{4}', CARGO='{5}', DIRECCION='{6}', NIT='{7}', CUIDAD='{8}', VENDEDOR='{9}' where ID={10}",
+                SqlCommand comando = new SqlCommand(string.Format("Update CLIENTES_CONSOLIDADOS set CONTACTO='{0}', CLIENTE='{1}', TELEFONO='{2}', CELULAR='{3}', CORREO='{4}', CARGO='{5}', DIRECCION='{6}', NIT='{7}', CUIDAD='{8}', VENDEDOR='{9}' where ID={10}",
                 pCliente.CONTACTO, pCliente.CLIENTE, pCliente.TELEFONO, pCliente.CELULAR, pCliente.CORREO, pCliente.CARGO, pCliente.DIRECCION, pCliente.NIT, pCliente.CUIDAD, pCliente.VENDEDOR, pCliente.ID), conexion);
 
                 retorno = comando.ExecuteNonQuery();
@@ -113,7 +113,7 @@ namespace App_modulo
             int retorno = 0;
             using (SqlConnection conexion = BDComun.ObtenerConexion())
             {
-                SqlCommand comando = new SqlCommand(string.Format("Delete from Clients where ID={0}", pID), conexion);
+                SqlCommand comando = new SqlCommand(string.Format("Delete from CLIENTES_CONSOLIDADOS where ID={0}", pID), conexion);
                 retorno = comando.ExecuteNonQuery();
                 conexion.Close();
             }
