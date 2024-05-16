@@ -47,17 +47,19 @@
             // 
             // txtEquipo
             // 
+            this.txtEquipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtEquipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEquipo.Location = new System.Drawing.Point(300, 160);
+            this.txtEquipo.Location = new System.Drawing.Point(429, 191);
             this.txtEquipo.Name = "txtEquipo";
             this.txtEquipo.Size = new System.Drawing.Size(326, 37);
             this.txtEquipo.TabIndex = 1;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(165, 57);
+            this.label1.Location = new System.Drawing.Point(294, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(411, 40);
             this.label1.TabIndex = 1;
@@ -65,9 +67,10 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(71, 467);
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnGuardar.Location = new System.Drawing.Point(200, 498);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(108, 49);
+            this.btnGuardar.Size = new System.Drawing.Size(120, 35);
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -75,9 +78,10 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(99, 157);
+            this.label2.Location = new System.Drawing.Point(228, 188);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 30);
             this.label2.TabIndex = 3;
@@ -85,9 +89,10 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(99, 235);
+            this.label3.Location = new System.Drawing.Point(228, 266);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 30);
             this.label3.TabIndex = 4;
@@ -95,9 +100,10 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(99, 313);
+            this.label4.Location = new System.Drawing.Point(228, 344);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 30);
             this.label4.TabIndex = 5;
@@ -105,9 +111,10 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(99, 384);
+            this.label5.Location = new System.Drawing.Point(228, 415);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(178, 30);
             this.label5.TabIndex = 6;
@@ -115,33 +122,37 @@
             // 
             // txtTransporte
             // 
+            this.txtTransporte.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTransporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTransporte.Location = new System.Drawing.Point(300, 235);
+            this.txtTransporte.Location = new System.Drawing.Point(429, 266);
             this.txtTransporte.Name = "txtTransporte";
             this.txtTransporte.Size = new System.Drawing.Size(326, 37);
             this.txtTransporte.TabIndex = 2;
             // 
             // txtInstalacion
             // 
+            this.txtInstalacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtInstalacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInstalacion.Location = new System.Drawing.Point(300, 313);
+            this.txtInstalacion.Location = new System.Drawing.Point(429, 344);
             this.txtInstalacion.Name = "txtInstalacion";
             this.txtInstalacion.Size = new System.Drawing.Size(326, 37);
             this.txtInstalacion.TabIndex = 3;
             // 
             // txtConfigura
             // 
+            this.txtConfigura.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtConfigura.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfigura.Location = new System.Drawing.Point(300, 380);
+            this.txtConfigura.Location = new System.Drawing.Point(429, 411);
             this.txtConfigura.Name = "txtConfigura";
             this.txtConfigura.Size = new System.Drawing.Size(326, 37);
             this.txtConfigura.TabIndex = 4;
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(196, 467);
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEditar.Location = new System.Drawing.Point(325, 498);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(108, 49);
+            this.btnEditar.Size = new System.Drawing.Size(120, 35);
             this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -149,9 +160,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(325, 467);
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEliminar.Location = new System.Drawing.Point(454, 498);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(108, 49);
+            this.btnEliminar.Size = new System.Drawing.Size(120, 35);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -159,9 +171,10 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(455, 467);
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBuscar.Location = new System.Drawing.Point(584, 498);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(108, 49);
+            this.btnBuscar.Size = new System.Drawing.Size(120, 35);
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -169,9 +182,10 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(578, 467);
+            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCerrar.Location = new System.Drawing.Point(707, 498);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(108, 49);
+            this.btnCerrar.Size = new System.Drawing.Size(120, 35);
             this.btnCerrar.TabIndex = 9;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -181,8 +195,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(751, 617);
+            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.ClientSize = new System.Drawing.Size(1053, 669);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);

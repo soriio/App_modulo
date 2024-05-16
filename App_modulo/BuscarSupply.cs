@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace App_modulo
         public BuscarSupply()
         {
             InitializeComponent();
+            btnRestaurar.Visible = false;
         }
 
         public Suministro SuministroSeleccionado { get; set; }
@@ -39,9 +41,60 @@ namespace App_modulo
 
         }
 
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+
+        int lx, ly;
+        int sw, sh;
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            lx = this.Location.X;
+            ly = this.Location.Y;
+            sw = this.Size.Width;
+            sh = this.Size.Height;
+            btnMaximizar.Visible = false;
+            btnRestaurar.Visible = true;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+        }
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+            btnMaximizar.Visible = true;
+            btnRestaurar.Visible = false;
+            this.Size = new Size(sw, sh);
+            this.Location = new Point(lx, ly);
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        private void panelControl_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
     }
 }

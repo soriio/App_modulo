@@ -101,54 +101,73 @@ namespace App_modulo
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            var result = MessageBox.Show("¿Estás seguro de que quieres realizar los cambios en este elemento seleccionado?", "Confirmación", MessageBoxButtons.YesNo);
 
-            Cliente pCliente = new Cliente
+            if (result == DialogResult.Yes)
             {
-                CONTACTO = txtContacto.Text,
-                CLIENTE = txtCliente.Text,
-                TELEFONO = txtTelefono.Text,
-                CELULAR = txtCelular.Text,
-                CORREO = txtCorreo.Text,
-                CARGO = txtCargo.Text,
-                DIRECCION = txtDireccion.Text,
-                NIT = txtNit.Text,
-                CUIDAD = txtCiudad.Text,
-                VENDEDOR = txtVendedor.Text,
-                ID = ClienteActual.ID,
+                Cliente pCliente = new Cliente
+                {
+                    CONTACTO = txtContacto.Text,
+                    CLIENTE = txtCliente.Text,
+                    TELEFONO = txtTelefono.Text,
+                    CELULAR = txtCelular.Text,
+                    CORREO = txtCorreo.Text,
+                    CARGO = txtCargo.Text,
+                    DIRECCION = txtDireccion.Text,
+                    NIT = txtNit.Text,
+                    CUIDAD = txtCiudad.Text,
+                    VENDEDOR = txtVendedor.Text,
+                    ID = ClienteActual.ID,
 
-            };
-            if (pCliente.CONTACTO == ClienteActual.CONTACTO &&
-                pCliente.CLIENTE == ClienteActual.CLIENTE &&
-                pCliente.TELEFONO == ClienteActual.TELEFONO &&
-                pCliente.CELULAR == ClienteActual.CELULAR &&
-                pCliente.CORREO == ClienteActual.CORREO &&
-                pCliente.CARGO == ClienteActual.CARGO &&
-                pCliente.DIRECCION == ClienteActual.DIRECCION &&
-                pCliente.NIT == ClienteActual.NIT &&
-                pCliente.CUIDAD == ClienteActual.CUIDAD &&
-                pCliente.VENDEDOR == ClienteActual.VENDEDOR)
-            {
-                MessageBox.Show("Debes realizar cambios antes de poder modificar.", "Sin cambios", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                };
+                if (pCliente.CONTACTO == ClienteActual.CONTACTO &&
+                    pCliente.CLIENTE == ClienteActual.CLIENTE &&
+                    pCliente.TELEFONO == ClienteActual.TELEFONO &&
+                    pCliente.CELULAR == ClienteActual.CELULAR &&
+                    pCliente.CORREO == ClienteActual.CORREO &&
+                    pCliente.CARGO == ClienteActual.CARGO &&
+                    pCliente.DIRECCION == ClienteActual.DIRECCION &&
+                    pCliente.NIT == ClienteActual.NIT &&
+                    pCliente.CUIDAD == ClienteActual.CUIDAD &&
+                    pCliente.VENDEDOR == ClienteActual.VENDEDOR)
+                {
+                    MessageBox.Show("Debes realizar cambios antes de poder modificar.", "Sin cambios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                int resultado = ClienteDAL.Modificar(pCliente);
+
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Contacto Editado Correctamente!",
+                        "Contacto Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiar();
+                    btnEleminar.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnGuardar.Enabled = true;
+                }
+
+                else
+                {
+                    MessageBox.Show("No Se Pudo Editar El Contacto", "Ocurrio un Error");
+                }
+
+
+
+
             }
-
-            int resultado = ClienteDAL.Modificar(pCliente);
-
-                
-            if (resultado > 0)
-            {
-                MessageBox.Show("Contacto Editado Correctamente!",
-                    "Contacto Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limpiar();
-                btnEleminar.Enabled = false;
-                btnModificar.Enabled = false;
-                btnGuardar.Enabled = true;
-            }
-
             else
             {
-                MessageBox.Show("No Se Pudo Editar El Contacto", "Ocurrio un Error");
-            }        
+                // Aquí puedes poner un mensaje o cualquier otra acción que quieras que ocurra si el usuario decide no realizar los cambios
+                MessageBox.Show("Has decidido no realizar los cambios.");
+            }
+
+
+
+
+
+          
 
         }
 
@@ -202,12 +221,5 @@ namespace App_modulo
                 MessageBox.Show("Se Cancelo La Eliminacion", "Cancelado");
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-            Registro_Usuarios re = new Registro_Usuarios(); 
-            re.Show();
-
-        }
     }
 }

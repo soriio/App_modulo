@@ -16,6 +16,8 @@ namespace App_modulo
         {
             return Settings.Default.ModuloDBConnectionString;
         }
+
+
         public static SqlConnection ObtenerConexion()
         {
             SqlConnection Conn = new SqlConnection(ObtenerString());

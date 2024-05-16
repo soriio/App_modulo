@@ -63,9 +63,9 @@ namespace App_modulo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap add_Usuario {
+        internal static System.Drawing.Bitmap Add_to_Collection {
             get {
-                object obj = ResourceManager.GetObject("add-Usuario", resourceCulture);
+                object obj = ResourceManager.GetObject("Add to Collection", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace App_modulo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_add_user_male_100 {
+        internal static System.Drawing.Bitmap Batch_Assign {
             get {
-                object obj = ResourceManager.GetObject("icons8-add-user-male-100", resourceCulture);
+                object obj = ResourceManager.GetObject("Batch Assign", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace App_modulo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_usuario_100 {
+        internal static System.Drawing.Bitmap Close {
             get {
-                object obj = ResourceManager.GetObject("icons8-usuario-100", resourceCulture);
+                object obj = ResourceManager.GetObject("Close", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace App_modulo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logout_3889524 {
+        internal static System.Drawing.Bitmap Full_Screen {
             get {
-                object obj = ResourceManager.GetObject("logout_3889524", resourceCulture);
+                object obj = ResourceManager.GetObject("Full Screen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace App_modulo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap remove_6431862 {
+        internal static System.Drawing.Bitmap Horizontal_Line {
             get {
-                object obj = ResourceManager.GetObject("remove_6431862", resourceCulture);
+                object obj = ResourceManager.GetObject("Horizontal Line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace App_modulo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap salario {
+        internal static System.Drawing.Bitmap Minimize_Window {
             get {
-                object obj = ResourceManager.GetObject("salario", resourceCulture);
+                object obj = ResourceManager.GetObject("Minimize Window", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace App_modulo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap supply_chain_4961530 {
+        internal static System.Drawing.Bitmap Module {
             get {
-                object obj = ResourceManager.GetObject("supply-chain_4961530", resourceCulture);
+                object obj = ResourceManager.GetObject("Module", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace App_modulo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap target_1605401 {
+        internal static System.Drawing.Bitmap Module1 {
             get {
-                object obj = ResourceManager.GetObject("target_1605401", resourceCulture);
+                object obj = ResourceManager.GetObject("Module1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,39 @@ namespace App_modulo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap user_11864164 {
+        internal static System.Drawing.Bitmap modulo_espacial {
             get {
-                object obj = ResourceManager.GetObject("user_11864164", resourceCulture);
+                object obj = ResourceManager.GetObject("modulo-espacial", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap modulo_lunar {
+            get {
+                object obj = ResourceManager.GetObject("modulo-lunar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Salary_male {
+            get {
+                object obj = ResourceManager.GetObject("Salary male", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap simulacion {
+            get {
+                object obj = ResourceManager.GetObject("simulacion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
